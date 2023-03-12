@@ -1,31 +1,25 @@
-const robotron =  document.querySelector('#robotron');
+const robotron =  document.querySelector('[data-controle]');
 
-const subtrairBraco = document.querySelector('#subtrair-braco');
-const somarBraco = document.querySelector('#somar-braco');
-const braco = document.querySelector('#braco');
+
 
 const controle = document.querySelectorAll('.controle-ajuste');
 
 controle.forEach( (elemento) => {
 	elemento.addEventListener('click', (evento) => {
-		
-		manipulaDados(evento.target.textContent);
+		manipulaDados(evento.target.dataset.controle, evento.target.parentNode);
 	})
 })
 
-/*
-somarBraco.addEventListener('click', () =>{
-	 manipulaDados("somar");
-})
-
-subtrairBraco.addEventListener('click', () => {
-	manipulaDados("subtrair");
-})
-*/
-function manipulaDados(operacao){
+function manipulaDados(operacao, controle){
+	const peca = controle.querySelector('[data-contador]');
 	if(operacao === "-"){
-		braco.value = parseInt(braco.value) - 1;
+		if(parseInt(peca.value) === 0){
+			alert("Valor não pode ser negativo");
+		}else{
+			peca.value = parseInt(peca.value) - 1;
+		}
+		
 	}else {
-		braco.value = parseInt(braco.value) + 1;
+		peca.value = parseInt(peca.value) + 1;
 	}
 }
