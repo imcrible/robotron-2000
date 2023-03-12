@@ -45,7 +45,7 @@ A primeira parte é o identificador deste dado, que consiste em data- + o nome d
 A segunda parte é o valor atribuído à este data-attribute, este valor deve sempre estar entre aspas “”, e dessa maneira é lido como uma string.
 Segue exemplo abaixo:
 
-**HTML**
+*HTML
 
 ```html
   <h1>Lista de tintas:</h1>
@@ -60,7 +60,7 @@ Segue exemplo abaixo:
 
 No JavaScript, podemos criar uma função que recebe esses atributos, permitindo manipulá-los:
 
-**JS**
+- JS
 
 ```javascript
 function mudaCores(elementos){
@@ -71,7 +71,7 @@ function mudaCores(elementos){
 
 O prefixo data- não é obrigatório para definir um data-attribute personalizado, podemos alterar o código para a seguinte forma:
 
-**HTML**
+- HTML
 
 ```html
   <h1>Lista de tintas:</h1>
@@ -84,7 +84,7 @@ O prefixo data- não é obrigatório para definir um data-attribute personalizad
   </ul>
 ```
 
-**JS**
+- JS
 
 ```javascript
 function mudaCores(elementos){
